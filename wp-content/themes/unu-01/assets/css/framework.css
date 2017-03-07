@@ -1,0 +1,173 @@
+/* Resets */
+
+* { 
+  -moz-box-sizing: border-box; 
+  -ms-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
+img { border: 0px; margin: 0; padding: 0; width: 100%; display: block; }
+ul, ol { list-style: none; margin: 0px; padding: 0px; }
+html { font-size: 100%; }
+body, html { margin: 0; padding: 0; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display:block;
+}
+
+iframe { border: 0; }
+
+button {background: transparent; border: 0; cursor: pointer; font-size: 1em; font-family: inherit;}
+
+a, *:focus, *:active {
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-decoration: none;
+}
+
+body * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Typography */
+
+body, html {
+  font-size: 10px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4,
+p {
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+
+/* Float container */
+
+.float-container > * { float: left; }
+.float-container:after,
+.clear {
+  zoom: 1; 
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  list-style: none;
+}
+
+.float-left { float: left; }
+.float-right { float: right; }
+
+/* Inline block container */
+
+/* Put the items in a ul or ol and omit the closing </li> in order to avoid space between them */
+
+.inline-block-container {
+  font-size: 0;
+  list-style: none;
+}
+
+.inline-block-container > * {
+  display: -moz-inline-stack;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+
+/* Flex Container */
+
+.flex-container {
+  display: -moz-inline-stack;
+  display: inline-block;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  }
+
+.flex-container.center {
+   -webkit-align-items: center;
+   align-items: center;
+}
+
+.flex-container.left {
+   -webkit-align-items: flex-start;
+   align-items: flex-start;
+}
+
+.flex-container.right {
+   -webkit-align-items: flex-end;
+   align-items: flex-end;
+}
+
+/* Selected text */
+
+::-moz-selection { background: WhiteSmoke; color: #000; text-shadow: none; }
+::selection { background: WhiteSmoke; color: #000; text-shadow: none; }
+
+/* Input boxes */
+
+input[type=text],
+input[type=email],
+input [type=date],
+input[type=password],
+input[type=search],
+input[type=tel] {
+  border:1px solid blue;
+}
+
+input:focus {
+  outline: 0px;
+  border:1px solid red;
+}
+
+/* Table */
+
+table,
+table tr,
+tr td,
+table tbody,
+table thead,
+table tfoot,
+table tr th
+{
+    margin:0;
+    padding:0;
+    background:none;
+    border:none;
+    border-collapse:collapse;
+    border-spacing:0;
+    background-image:none;
+}
+
+/* Grid */
+
+.gutters {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.trunk {
+  width: 66%; max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.centered {
+    margin-left: auto;
+  margin-right: auto;
+}
+
+/* All grid units from smaller to larger 
+Activate only what you need.
+*/

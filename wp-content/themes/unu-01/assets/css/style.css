@@ -1,0 +1,158 @@
+
+/* Font loader ------------------*/
+
+@font-face {
+    font-family: 'FONTNAME';
+    src: url('../fonts/FILENAME.eot');
+    src: url('../fonts/FILENAME.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/FILENAME.woff') format('woff'),
+         url('../fonts/FILENAME.ttf') format('truetype'),
+         url('../fonts/FILENAME.svg#FONTNAME') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Spinning loader ------------------*/
+
+.spinner {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 700ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 700ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 700ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-transition: rotate(3600deg);
+}  
+
+@-webkit-keyframes spin {
+  from {-webkit-transform:rotate(0deg);}
+  to {-webkit-transform:rotate(360deg);}
+}
+
+@-moz-keyframes spin {
+  from {-moz-transform:rotate(0deg);}
+  to {-moz-transform:rotate(360deg);}
+}
+
+@-o-keyframes spin {
+  from {-o-transform:rotate(0deg);}
+  to {-o-transform:rotate(360deg);}
+}
+
+@-ms-keyframes spin {
+  from {-ms-transform:rotate(0deg);}
+  to {-ms-transform:rotate(360deg);}
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+
+
+/* Img url ------------------*/
+
+/*.img {
+  background: url('../img/apples.jpg') center center no-repeat;
+  width: 100%;
+  height: 100vh;
+}*/
+
+
+
+
+
+/* Typography ------------------*/
+
+
+
+
+
+
+/* Footer ------------------*/
+
+.page-footer .copyright {
+    text-align: right;
+}
+
+
+@media screen and (max-width: 1400px) {
+
+  .L-1-12 { width: 8.333333%; }
+  .L-1-6 { width: 16.666667%; }
+  .L-1-4 { width: 25%; }
+  .L-1-3 { width: 33.33333%; }
+  .L-1-2 { width: 50%; }
+  .L-5-12 { width: 41.666667%; }
+  .L-1-2 { width: 50%; }
+  .L-7-12 { width: 58.333333; }
+  .L-2-3 { width: 66.66666%; }
+  .L-3-4 { width: 75%; }
+  .L-5-6 {width: 83.333333%; }
+  .L-11-12 { width: 91.666667%; }
+  .L-1-1 { width: 100%; }
+
+  /* Visibility */
+
+  .L-show { display: block; display: initial !important; }
+  .L-hide { display: none !important; }
+
+
+
+}
+
+
+
+
+/* Medium (like ipad portrait)
+Activate only what you need.
+*/
+
+
+@media screen and (max-width: 800px) {
+  .M-show { display: block; display: initial !important; }
+  .M-hide { display: none !important; }
+  .M-1-12 { width: 8.333333%; }
+  .M-1-6 { width: 16.666667%; }
+  .M-1-4 { width: 25%; }
+  .M-1-3 { width: 33.33333%; }
+  .M-5-12 { width: 41.666667%; }
+  .M-1-2 { width: 50%; }
+  .M-7-12 { width: 58.333333; }
+  .M-2-3 { width: 66.66666%; }
+  .M-3-4 { width: 75%; }
+  .M-5-6 {width: 83.333333%; }
+  .M-11-12 { width: 91.666667%; }
+  .M-1-1 { width: 100%; }
+}
+
+/* Small (like iphone landscape)
+Activate only what you need.
+*/
+
+
+@media screen and (max-width: 600px) {
+  .S-show { display: block; display: initial !important; }
+  .S-hide { display: none !important; }
+  .S-1-12 { width: 8.333333%; }
+  .S-1-6 { width: 16.666667%; }
+  .S-1-4 { width: 25%; }
+  .S-1-3 { width: 33.33333%; }
+  .S-5-12 { width: 41.666667%; }
+  .S-1-2 { width: 50%;}
+  .S-7-12 { width: 58.333333; }
+  .S-2-3 { width: 66.66666%; }
+  .S-3-4 { width: 75%; }
+  .S-5-6 {width: 83.333333%; }
+  .S-11-12 { width: 91.666667%; }
+  .S-1-1 { width: 100%; }
+}
+
