@@ -2,12 +2,11 @@
 /* Font loader ------------------*/
 
 @font-face {
-    font-family: 'FONTNAME';
-    src: url('../fonts/FILENAME.eot');
-    src: url('../fonts/FILENAME.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/FILENAME.woff') format('woff'),
-         url('../fonts/FILENAME.ttf') format('truetype'),
-         url('../fonts/FILENAME.svg#FONTNAME') format('svg');
+    font-family: 'Academica';
+    src: url('../fonts/academica.eot');
+    src: url('../fonts/academica.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/academica.woff') format('woff'),
+         url('../fonts/academica.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -81,13 +80,20 @@
 
 body, html {
   text-align: center;
+  font-family: 'Academica';
+  background-color: #FDFDF3;
+  color: rgb(45,40,140);
 }
 
 .title-size {
   font-size: 6rem;
+  line-height: 1em;
 }
 
-
+.body-size {
+  font-size: 2rem;
+  line-height: 1.3em;
+}
 
 
 
@@ -124,30 +130,92 @@ body, html {
 
 .mood-gallery .gallery  {
   position: relative;
-  height: 0;
-  padding-bottom: 66.666%;
-  background: blue;
+  height: 75vh;
+  display: block;
 }
+
+.mood-gallery.open .gallery {
+  /*height: 100%;*/
+}
+
 
 
 .mood-gallery .gallery li  {
   position: absolute;
-  top:0; bottom:0; left:0; right:0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: transform 300ms;
 }
 
-.mood-gallery .gallery li:nth-child(1)  {
-  bottom: 10%;
+.mood-gallery .gallery img {
+  height: auto;
+  width: auto;
+  max-height: 66.666%;
+  /*max-height: 70%;*/
+/*  margin-left: auto;
+  margin-right: auto;*/
+  z-index: 1;
 }
 
-.mood-gallery .gallery li:nth-child(2)  {
-  left: 25%;
+.mood-gallery .gallery li:hover {
+  -webkit-transform: translate(-49%, -49%);
+  -moz-transform: translate(-49%, -49%);
+  transform: translate(-49%, -49%);
+  transition: transform 300ms;
 }
 
 
+.mood-gallery .gallery li:nth-child(1) img  {
+  -webkit-transform: translate(-25vw, 5vh);
+  -moz-transform: translate(-25vw, 5vh);
+  transform: translate(-25vw, 5vh);
+}
+
+.mood-gallery .gallery li:nth-child(2) img  {
+  -webkit-transform: translate(0%, -15vh);
+  -moz-transform: translate(0%, -15vh);
+  transform: translate(0%, -15vh);
+}
+
+.mood-gallery .gallery li:nth-child(3) img  {
+  -webkit-transform: translate(15vw, -5vh);
+  -moz-transform: translate(15vw, -5vh);
+  transform: translate(15vw, -5vh);
+}
+
+.mood-gallery .gallery li:nth-child(4) img  {
+  -webkit-transform: translate(30vw, 0vh);
+  -moz-transform: translate(30vw, 0vh);
+  transform: translate(30vw, 0vh);
+}
+
+.mood-gallery .gallery li:nth-child(5) img  {
+  -webkit-transform: translate(10vw, 15vh);
+  -moz-transform: translate(10vw, 15vh);
+  transform: translate(10vw, 15vh);
+}
+
+.mood-gallery .gallery li:nth-child(6) img  {
+  -webkit-transform: translate(-10vw, 10vh);
+  -moz-transform: translate(-10vw, 10vh);
+  transform: translate(-10vw, 10vh);
+}
 
 
+.mood-gallery .gallery li:nth-child(7) img  {
+  -webkit-transform: translate(-5vw, -5vh);
+  -moz-transform: translate(-5vw, -5vh);
+  transform: translate(-5vw, -5vh);
+}
 
 
+.workshop-story {
+  text-align: left;
+  text-indent: 25%;
+}
 
 
 
@@ -162,6 +230,34 @@ body, html {
 
 
 /* MEDIA QUERIES ----------------------------------------------------------*/
+
+@media screen and (min-width: 1401px) {
+
+  body, html {
+    background: yellow;
+  }
+
+  .XL-1-12 { width: 8.333333%; }
+  .XL-1-6 { width: 16.666667%; }
+  .XL-1-4 { width: 25%; }
+  .XL-1-3 { width: 33.33333%; }
+  .XL-1-2 { width: 50%; }
+  .XL-5-12 { width: 41.666667%; }
+  .XL-1-2 { width: 50%; }
+  .XL-7-12 { width: 58.333333; }
+  .XL-2-3 { width: 66.66666%; }
+  .XL-3-4 { width: 75%; }
+  .XL-5-6 {width: 83.333333%; }
+  .XL-11-12 { width: 91.666667%; }
+  .XL-1-1 { width: 100%; }
+
+  /* Visibility */
+
+  .XL-show { display: block; display: initial !important; }
+  .XL-hide { display: none !important; }
+
+}
+
 
 
 @media screen and (max-width: 1400px) {
