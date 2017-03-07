@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
 			<div id="content">
-						<main id="main" role='main'>
+
+				<div id="inner-content" class="wrap cf">
+
+						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php
 							the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -46,7 +49,7 @@
 
 							<?php else : ?>
 
-									<article id="post-not-found">
+									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
 											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 										</header>
@@ -61,6 +64,10 @@
 							<?php endif; ?>
 
 						</main>
+
+					<?php get_sidebar(); ?>
+
+				</div>
 
 			</div>
 

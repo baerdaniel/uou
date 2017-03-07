@@ -38,6 +38,11 @@
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/animate.css" type="text/css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" type="text/css">
 
+		<!-- Plugins -->
+		  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.1.1.min.js"></script>
+		  <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/smoothscroll.js"></script> -->
+		  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/scripts.js"></script>
+
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php // wordpress head functions ?>

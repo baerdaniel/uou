@@ -70,7 +70,22 @@
 
 
 
+
+
+
+
+
+
+
 /* Typography ------------------*/
+
+body, html {
+  text-align: center;
+}
+
+.title-size {
+  font-size: 6rem;
+}
 
 
 
@@ -82,6 +97,71 @@
 .page-footer .copyright {
     text-align: right;
 }
+
+
+
+
+
+/* HOME ----------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* WORKSHOPS ----------------------------------------------------------*/
+
+
+.mood-gallery .gallery  {
+  position: relative;
+  height: 0;
+  padding-bottom: 66.666%;
+  background: blue;
+}
+
+
+.mood-gallery .gallery li  {
+  position: absolute;
+  top:0; bottom:0; left:0; right:0;
+}
+
+.mood-gallery .gallery li:nth-child(1)  {
+  bottom: 10%;
+}
+
+.mood-gallery .gallery li:nth-child(2)  {
+  left: 25%;
+}
+
+
+
+
+
+
+
+
+
+
+/* SECTION ----------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES ----------------------------------------------------------*/
 
 
 @media screen and (max-width: 1400px) {
@@ -104,8 +184,6 @@
 
   .L-show { display: block; display: initial !important; }
   .L-hide { display: none !important; }
-
-
 
 }
 

@@ -2,34 +2,74 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" role="main">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<?php
-								/*
-								 * Ah, post formats. Nature's greatest mystery (aside from the sloth).
-								 *
-								 * So this function will bring in the needed template file depending on what the post
-								 * format is. The different post formats are located in the post-formats folder.
-								 *
-								 *
-								 * REMEMBER TO ALWAYS HAVE A DEFAULT ONE NAMED "format.php" FOR POSTS THAT AREN'T
-								 * A SPECIFIC POST FORMAT.
-								 *
-								 * If you want to remove post formats, just delete the post-formats folder and
-								 * replace the function below with the contents of the "format.php" file.
-								*/
-								get_template_part( 'post-formats/format', get_post_format() );
-							?>
+
+
+							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+
+				                <header class="workshop-header float-container">
+
+				                  <div class='artist-title L-1-2'>
+				                    <h1 class='title-size'><?php the_field('artist'); ?></h1>
+				                    <p class='title-size'><?php the_field('artist_description'); ?></p>
+				                  </div>
+
+				                  <div class='group-title L-1-2'>
+				                    <h1 class='title-size'><?php the_field('group'); ?></h1>
+				                    <p class='title-size'><?php the_field('group_description'); ?></p>
+				                  </div>
+
+				                  <h1 class='title-size L-1-1'>
+				                    <?php the_title(); ?>
+				                  </h1>
+				                
+				                </header>
+
+
+				                <section class='mood-gallery L-2-3 centered'>
+				                <?php 
+
+									$images = get_field('mood_gallery');
+
+									if( $images ): ?>
+									    <ul class='gallery'>
+									        <?php foreach( $images as $image ): ?>
+									            <li class='slide L-2-3 centered'>
+									                     <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+									                <p><?php echo $image['caption']; ?></p>
+									            </li>
+									        <?php endforeach; ?>
+									    </ul>
+									<?php endif; ?>
+</section>
+
+
+
+
+				                <section>
+				                  <?php the_content(); ?>
+				                </section>
+
+
+				            </article> <?php // end article ?>
+
+
+
+
+
+
+
+
 
 						<?php endwhile; ?>
 
 						<?php else : ?>
 
-							<article id="post-not-found" class="hentry cf">
+							<article id="post-not-found">
 									<header class="article-header">
 										<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 									</header>
@@ -45,8 +85,6 @@
 
 					</main>
 
-
-				</div>
 
 			</div>
 
