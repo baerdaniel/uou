@@ -3,20 +3,35 @@
 
 $(document).ready(function(){
 
+	// $(initiateFlickity);
 
-	$('.mood-gallery .gallery').click(moodSlider);
+
+	$('.open-gallery').click(moodSlider);
+	$('.open-gallery').click(initiateFlickity);
+	$('.open-gallery').click(darkBackground);
 
 
 });
 
 
 
+function initiateFlickity(e){
+	$('.mood-gallery .gallery').flickity({
+	  // options
+	  cellAlign: 'center',
+	  contain: true,
+	  wrapAround: true,
+	  freeScroll: true,
+		freeScrollFriction: 0.01,
+	  cellSelector: '.slide'
+	});
+}
+
 
 function moodSlider(e){
-
-	var dh = $(document).height();
-
-	$(this).toggleClass('open');
-	$(this).css('height' , dh + 'px');
-
+	$('.mood-gallery').toggleClass('closed');
 };
+
+function darkBackground(e) {
+	$('body').toggleClass('dark');
+}

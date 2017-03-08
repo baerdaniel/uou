@@ -36,11 +36,13 @@
 
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/framework.css" type="text/css"> 
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/animate.css" type="text/css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/flickity.css" type="text/css">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" type="text/css">
 
 		<!-- Plugins -->
 		  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery-3.1.1.min.js"></script>
 		  <!-- <script src="<?php echo get_template_directory_uri(); ?>/assets/js/smoothscroll.js"></script> -->
+		  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/flickity.pkgd.min.js"></script>
 		  <script src="<?php echo get_template_directory_uri(); ?>/assets/js/scripts.js"></script>
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
@@ -59,7 +61,7 @@
 			<header class="header">
 
 
-					<p id="logo" class="h1" ><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>s
+					<p id="logo" class="h1" ><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
 
 					<nav role="navigation" >

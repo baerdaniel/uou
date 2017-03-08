@@ -13,29 +13,31 @@
 
 	                <header class="workshop-header float-container">
 
-	                  <div class='artist-title L-1-2'>
-	                    <h1 class='title-size'><?php the_field('artist'); ?></h1>
-	                    <p class='title-size'><?php the_field('artist_description'); ?></p>
+	                  <div class='artist-title L-1-2 gutters'>
+	                    <h1 class='title-size animated fadeInLeft'><?php the_field('artist'); ?></h1>
+	                    <p class='title-size animated slow fadeInLeft'><?php the_field('artist_description'); ?></p>
 	                  </div>
 
-	                  <div class='group-title L-1-2'>
-	                    <h1 class='title-size'><?php the_field('group'); ?></h1>
-	                    <p class='title-size'><?php the_field('group_description'); ?></p>
+	                  <div class='group-title L-1-2 gutters'>
+	                    <h1 class='title-size animated fadeInRight'><?php the_field('group'); ?></h1>
+	                    <p class='title-size animated slow fadeInRight'><?php the_field('group_description'); ?></p>
 	                  </div>
 
-	                  <h1 class='title-size L-1-1'>
+	                  <h1 class='workshop-title title-size L-1-1 animated slow fadeIn'>
 	                    <?php the_title(); ?>
 	                  </h1>
 	                
 	                </header>
 
 
-	                <section class='mood-gallery L-1-1'>
+	                <section class='mood-gallery closed L-1-1'>
 	                <?php 
 
 						$images = get_field('mood_gallery');
 
 						if( $images ): ?>
+							<button class='open-gallery'>Open Gallery</button>
+							<div class='photographer-name small-size'><?php the_field('photographer'); ?></div>
 						    <ul class='gallery'>
 						        <?php foreach( $images as $image ): ?>
 						            <li class='slide'>

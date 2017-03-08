@@ -86,8 +86,9 @@ body, html {
 }
 
 .title-size {
-  font-size: 6rem;
+  font-size: 5rem;
   line-height: 1em;
+    letter-spacing: -0.03em;
 }
 
 .body-size {
@@ -95,6 +96,10 @@ body, html {
   line-height: 1.3em;
 }
 
+.small-size {
+  font-size: 1.3rem;
+  line-height: 1.3em;
+}
 
 
 
@@ -127,88 +132,158 @@ body, html {
 
 /* WORKSHOPS ----------------------------------------------------------*/
 
-
-.mood-gallery .gallery  {
-  position: relative;
-  height: 75vh;
-  display: block;
-}
-
-.mood-gallery.open .gallery {
-  /*height: 100%;*/
+.single article.workshop,
+.single .workshop-title {
+  margin-top: 4rem;
 }
 
 
-
-.mood-gallery .gallery li  {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  transition: transform 300ms;
+.artist-title h1 {
+  text-align: left;
 }
 
-.mood-gallery .gallery img {
-  height: auto;
-  width: auto;
-  max-height: 66.666%;
-  /*max-height: 70%;*/
-/*  margin-left: auto;
-  margin-right: auto;*/
-  z-index: 1;
+.group-title h1 {
+  text-align: right;
 }
 
-.mood-gallery .gallery li:hover {
-  -webkit-transform: translate(-49%, -49%);
+
+
+
+.mood-gallery .gallery.closed li:hover {
+/*  -webkit-transform: translate(-49%, -49%);
   -moz-transform: translate(-49%, -49%);
-  transform: translate(-49%, -49%);
+  transform: translate(-49%, -49%);*/
   transition: transform 300ms;
 }
 
 
 .mood-gallery .gallery li:nth-child(1) img  {
-  -webkit-transform: translate(-25vw, 5vh);
-  -moz-transform: translate(-25vw, 5vh);
-  transform: translate(-25vw, 5vh);
+  top: 10%;
 }
 
 .mood-gallery .gallery li:nth-child(2) img  {
-  -webkit-transform: translate(0%, -15vh);
-  -moz-transform: translate(0%, -15vh);
-  transform: translate(0%, -15vh);
+  top:0;
 }
 
 .mood-gallery .gallery li:nth-child(3) img  {
-  -webkit-transform: translate(15vw, -5vh);
-  -moz-transform: translate(15vw, -5vh);
-  transform: translate(15vw, -5vh);
+  top:15%;
 }
 
 .mood-gallery .gallery li:nth-child(4) img  {
-  -webkit-transform: translate(30vw, 0vh);
-  -moz-transform: translate(30vw, 0vh);
-  transform: translate(30vw, 0vh);
+  bottom: 15%;
+
 }
 
 .mood-gallery .gallery li:nth-child(5) img  {
-  -webkit-transform: translate(10vw, 15vh);
-  -moz-transform: translate(10vw, 15vh);
-  transform: translate(10vw, 15vh);
+  bottom: 5%;
 }
 
-.mood-gallery .gallery li:nth-child(6) img  {
-  -webkit-transform: translate(-10vw, 10vh);
-  -moz-transform: translate(-10vw, 10vh);
-  transform: translate(-10vw, 10vh);
+/*.mood-gallery .gallery li:nth-child(6) img  {
+  -webkit-transform: translate(-70%, 50%);
+  -moz-transform: translate(-70%, 50%);
+  transform: translate(-70%, 50%);
 }
 
 
 .mood-gallery .gallery li:nth-child(7) img  {
-  -webkit-transform: translate(-5vw, -5vh);
-  -moz-transform: translate(-5vw, -5vh);
-  transform: translate(-5vw, -5vh);
+  -webkit-transform: translate(-70%, 0);
+  -moz-transform: translate(-70%, 0);
+  transform: translate(-70%, 0);
+}*/
+
+
+.mood-gallery .gallery  {
+  position: relative;
+  width: 100%;
+  left:0;
+  height: 75vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.mood-gallery .gallery img {
+  height: auto;
+  width: auto;
+  max-height: 75%;
+  margin-right: auto;*/
+  z-index: 1;
+}
+
+
+
+.gallery li img {
+  max-height: 100%;
+  height: 100%;
+  margin: 0px auto;
+  position: absolute;
+  left:0; right:0;
+
+  transform: scale(0.9);
+
+  transition: all 1s ease-in-out;
+}
+
+.gallery .is-selected img {
+  transform: scale(1);
+}
+
+
+.gallery li {
+  width: 50vw;
+  height: 100%;
+  background: transparent;
+  transition: height 1s ease-in-out, width 1s ease-in-out;
+}
+
+.mood-gallery.closed .gallery li{
+  width: 20px;
+  background: transparent;
+  display: inline-block;
+  transition: height 1s ease-in-out, width 1s ease-in-out;
+}
+
+.photographer-name {
+  position: absolute;
+  right:0;
+  transform: rotate(-90deg);
+  transform-origin: right bottom;
+}
+
+
+.flickity-prev-next-button {
+  height: 100%;
+  width: 12.5%;
+  display: block;
+  top:0;
+}
+
+.flickity-prev-next-button svg {
+  display: none;
+}
+
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+
+
+
+.next {
+
+}
+
+body {
+  -webkit-transition: background-color 500ms ease-in-out;
+  -moz-transition: background-color 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
+}
+
+body.dark{
+  background-color: rgb(45,40,140);
+  -webkit-transition: background-color 500ms ease-in-out;
+  -moz-transition: background-color 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
 }
 
 
