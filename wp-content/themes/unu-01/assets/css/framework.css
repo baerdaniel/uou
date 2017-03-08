@@ -6,7 +6,7 @@
   box-sizing: border-box; 
 }
 
-img { border: 0px; margin: 0; padding: 0; width: 100%; display: block; }
+img { border: 0px; margin: 0; padding: 0; width: 100%; height:auto; display: block; }
 ul, ol { list-style: none; margin: 0px; padding: 0px; }
 html { font-size: 100%; }
 body, html { margin: 0; padding: 0; }
